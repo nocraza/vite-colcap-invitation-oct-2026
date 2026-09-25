@@ -231,7 +231,7 @@ export default function InteractiveEnvelope() {
           onClick={() => {
             const link = document.createElement('a');
             link.href = teaser2;
-            link.download = 'invitation.jpg';
+            link.download = 'RSVP.jpg';
             link.click();
           }}
         >
