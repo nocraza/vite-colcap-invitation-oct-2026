@@ -66,6 +66,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(5, 3),
     },
+    height: '100vh',
+    paddingTop: 0,
+    paddingBottom: 0,
   },
   iPadContainer: {
     display: 'flex',
@@ -187,7 +190,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   heroSub: {
-    fontSize: '0.7rem',
+    fontSize: '0.8rem',
     letterSpacing: '0.13em',
     color: '#b0b0b0',
     textTransform: 'uppercase',
@@ -585,10 +588,10 @@ export default function AuthInvitation() {
       <Box className={classes.hero}>
         <BowClip style={{ top: 50, left: '41%', transform: 'rotate(-8deg)' }} />
         <BowClip style={{ top: 54, left: 'calc(41% + 52px)', transform: 'rotate(5deg)' }} />
-        <BowClip style={{ bottom: 75, right: 110, transform: 'rotate(12deg)' }} />
-        <BowClip style={{ bottom: 60, left: 70, transform: 'rotate(-5deg)' }} />
+        <BowClip style={{ bottom: 160, right: 110, transform: 'rotate(12deg)' }} />
+        <BowClip style={{ bottom: 155, left: 70, transform: 'rotate(-5deg)' }} />
         <BowClip style={{ top: 90, right: 55, transform: 'rotate(20deg)' }} />
-        <BowClip style={{ bottom: 120, right: 200, transform: 'rotate(-15deg)' }} />
+        <BowClip style={{ bottom: 150, right: 200, transform: 'rotate(-15deg)' }} />
 
         <Grid container alignItems="center">
           {/* iPad mockup — click to open invitation preview */}
@@ -635,11 +638,19 @@ export default function AuthInvitation() {
               Real-Time RSVP Tracking.
             </Typography> */}
             <Typography className={classes.heroHeading}>
-              Blah Blah Blah BlahBlah Blah Blah Blah Blah Blah Blah BlahBlah Blah October 16 2026
-
+              20 Years of Vision. Trust. Growth.
             </Typography>
+            {/* <Typography className={classes.heroHeading}>
+              20 Years of Vision 
+            </Typography>
+            <Typography className={classes.heroHeading}>
+              Trust
+            </Typography>
+            <Typography className={classes.heroHeading}>
+              Growth
+            </Typography> */}
             <Typography className={classes.heroSub}>
-              ✨ Prepare for the Most Glamorous Night of the Year ✨
+              From humble beginnings to lasting impact, our journey has been defined by strong relationships and an unwavering commitment to excellence. We invite you to celebrate this important milestone with us as we mark twenty years of success.
             </Typography>
             {/* <Box className={classes.emailRow}>
               <input
