@@ -57,6 +57,9 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
+      - name: Fix Rolldown Linux Binary # 👈 ADD THIS STEP
+        run: npm install @rolldown/binding-linux-x64-gnu --legacy-peer-deps
+
       - name: Build project
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
 
