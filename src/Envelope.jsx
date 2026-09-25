@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import teaser2 from './assets/Teaser 2.png';
-import teaser2Title from './assets/Teaser 2 Title.png';
+import teaser2Title from './assets/Teaser 2 title.png';
 import sealImage from './assets/logo_only.png';
 import { CircularProgress } from '@material-ui/core';
 
