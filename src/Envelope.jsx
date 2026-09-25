@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import teaser2 from './assets/Teaser 2.png';
+import teaser2Title from './assets/Teaser 2 Title.png';
 import sealImage from './assets/logo_only.png';
 import { CircularProgress } from '@material-ui/core';
 
@@ -8,7 +9,7 @@ export default function InteractiveEnvelope() {
   const [imagesReady, setImagesReady] = useState(false);
 
   useEffect(() => {
-    const imageSources = [teaser2, sealImage];
+    const imageSources = [teaser2, sealImage, teaser2Title];
 
     const preloadImage = (src) =>
       new Promise((resolve, reject) => {
@@ -217,7 +218,7 @@ export default function InteractiveEnvelope() {
             <div className="letter">
               <img
                 className="letter-image"
-                src={teaser2}
+                src={teaser2Title}
                 alt="Invitation artwork"
               />
             </div>
