@@ -139,7 +139,7 @@ export default function InteractiveEnvelope() {
           background-color: #ffffff;
           border-radius: 4px;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-          transition: transform 0.45s ease 0s;
+          transition: transform 0.45s ease 0s, height 0.45s ease 0s, box-shadow 0.45s ease 0s;
           z-index: 2;
           overflow: hidden;
         }
@@ -147,9 +147,10 @@ export default function InteractiveEnvelope() {
         .letter-image {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
+          object-position: center;
           display: block;
-          background: #ffffff;
+          background: #000001;
         }
 
         .seal {
@@ -184,13 +185,18 @@ export default function InteractiveEnvelope() {
         }
 
         .envelope-wrapper.open .letter {
-          transform: translateY(-90px);
-          transition: transform 0.45s ease 0.2s;
+          height: 320px;
+          transform: translateY(-160px);
+          z-index: 5;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+          transition: transform 0.45s ease 0.2s, height 0.45s ease 0.2s, box-shadow 0.45s ease 0.2s, z-index 0s linear 0.44s;
         }
 
         .envelope-wrapper:not(.open) .letter {
+          height: 150px;
           transform: translateY(0px);
-          transition: transform 0.45s ease 0s;
+          z-index: 2;
+          transition: transform 0.45s ease 0s, height 0.45s ease 0s, box-shadow 0.45s ease 0s;
         }
 
         .envelope-wrapper:not(.open) .flap {
@@ -218,7 +224,7 @@ export default function InteractiveEnvelope() {
             <div className="letter">
               <img
                 className="letter-image"
-                src={teaser2Title}
+                src={teaser2}
                 alt="Invitation artwork"
               />
             </div>
