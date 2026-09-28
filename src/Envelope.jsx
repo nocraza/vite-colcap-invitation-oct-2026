@@ -1,15 +1,14 @@
-import { useState, useEffect } from 'react';
-import teaser2 from './assets/Teaser 2.png';
-import teaser2Title from './assets/Teaser 2 title.png';
-import sealImage from './assets/logo_only.png';
 import { CircularProgress } from '@material-ui/core';
+import { useEffect, useState } from 'react';
+import teaser2 from './assets/Teaser 2.png';
+import sealImageSvg from './assets/logo.svg';
 
 export default function InteractiveEnvelope() {
   const [isOpen, setIsOpen] = useState(false);
   const [imagesReady, setImagesReady] = useState(false);
 
   useEffect(() => {
-    const imageSources = [teaser2, sealImage, teaser2Title];
+    const imageSources = [teaser2, sealImageSvg];
 
     const preloadImage = (src) =>
       new Promise((resolve, reject) => {
@@ -219,7 +218,7 @@ export default function InteractiveEnvelope() {
             <div className="flap"></div>
             <div className="pocket"></div>
             <div className="seal" aria-hidden="true">
-              <img className="seal-image" src={sealImage} alt="seal" />
+              <img className="seal-image" src={sealImageSvg} alt="seal" />
             </div>
             <div className="letter">
               <img
