@@ -47,24 +47,6 @@ export default function InteractiveEnvelope() {
     <div style={styles.container}>
       {/* Injecting dynamic CSS classes directly via standard style tags to keep it single-file */}
       <style>{`
-        @keyframes spin {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-
-        @keyframes spin {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-
         .envelope-wrapper {
           position: relative;
           cursor: pointer;
@@ -156,7 +138,7 @@ export default function InteractiveEnvelope() {
           position: absolute;
           left: 50%;
           top: 50%;
-          transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%) rotate(0deg);
           width: 52px;
           height: 52px;
           display: flex;
@@ -167,6 +149,7 @@ export default function InteractiveEnvelope() {
           overflow: hidden;
           background: #ffffff;
           box-shadow: 0 0 0 2px rgba(255,255,255,0.15), 0 5px 12px rgba(0,0,0,0.35);
+          transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
         .seal-image {
@@ -175,6 +158,10 @@ export default function InteractiveEnvelope() {
           display: block;
           object-fit: cover;
           border-radius: 50%;
+        }
+
+        .envelope-wrapper.open .seal {
+          transform: translate(-50%, -50%) rotate(18deg);
         }
 
         .envelope-wrapper.open .flap {
